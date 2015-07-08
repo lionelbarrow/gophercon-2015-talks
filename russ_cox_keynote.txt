@@ -1,0 +1,56 @@
+Go, Open Source, Community
+-----
+
+Russel Cox, GopherCon 2015
+
+Go philosophy: do less, enable more
+
+In general if we want to support 100 things, we can't make 100 changes.
+Instead, we research a few small changes to support 90 things. Yes, this means
+that sometimes we don't support things that are good ideas.
+
+Being small makes Go easier to learn, understand, implement, debug, and
+ultimately evolve.
+
+For example, Go's concurrency primitives are meant to be medium level: higher
+up than locks and semaphores, but supporting a broader range of use case than
+high up abstractions like ZeroMQ.
+
+Static types provide useful safety, but Go's type system is intentionally
+lightweight. In particular, omitting the implements declaration deemphasize
+hierarchy and makes things easier to change.
+
+Gofmt is intentionally designed as a stepping stone towards automatic
+refactoring. Gofmt directly enabled go fix, go imports and more.
+
+Extensible syntax would make the language more flexible, but
+would also push the language towards degenerating into different dialects.
+
+Why is Go open source?
+
+Closed languages die. Go's open source compilers are much more robust and spec
+compliant than the Plan 9 compilers they were derived from ever were.
+
+Go team at Google could never support the Go language on its own.
+
+Would rather support 90% of features in a clean way than 99% of features in a
+dirty way. But also want to attract people with a diverse range of talents.
+
+Increasing depth of contributions from non-Google open source community. Early
+contributions included Windows support and improvements to numeric libraries,
+but not real language design. Recently a major architectural port was done
+entirely by non-Google contributors, which involved deep and substantial
+changes.
+
+Google deploys static binaries in production, so most design for dynamic
+binaries being led by non-Google contributors.
+
+Let's talk about the Go command's approach to vendoring. Google does not
+suffer much from vendoring. Current tools for helping are mutually
+incompatible. Go team wanted to push a mutually intelligible metadata file
+and rewriting import paths. Open source community clearly told them that was a
+bad idea.
+
+Go needs to be open and needs a wide range of people. The Go community needs a
+code of conduct. Most important standard: "If you want to use or discuss Go,
+you are welcome in our community."

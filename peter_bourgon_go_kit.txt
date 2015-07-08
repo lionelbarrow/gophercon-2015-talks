@@ -1,0 +1,46 @@
+Go Kit: A Standard Library for Distributed Systems
+-----
+
+Peter Bourgon, GopherCon 2015
+
+Modern enterprise is:
+* Tech-oriented
+* Consumer-focused
+* Successful - growing fast
+* 50-1000 engineers
+* Microservice architecture
+
+Enterprises:
+* Google -- too big
+* Amazon -- too big
+* Twitter
+* Netflix
+* Spotify
+* SoundCloud
+* Etsy
+* (Braintree)
+
+These enterprises can take risks on technology; technological wins are also
+business wins. These are ideal businesses for Go, but adoption in them hasn't
+been great.
+
+So what's missing? Maturity, sure, but also library support. Modern
+enterprises need a set of tools and abstractions. So, enter Go Kit. Very
+similar to Ribbon (Twitter) or Finagle (Netflix).
+
+Goal of Go Kit is to make Go a first-class citizen at the application layer.
+
+Built on RPC. Go kits domain: transport, service metrics, service safety,
+service connectivity. Your domain: biz analytics, biz metrics, biz logic.
+
+Components:
+* An endpoint interface
+* Logging API that _mandates_ structured logging
+* Metrics, with the help of Coda Hale!
+* Rate limiting middleware
+* Circuit breaking middleware -- if all requests are failing to downstream
+  service, stop sending requests!
+* Load balance and service discovery
+* Tracing
+
+Example - addsvc, a service that just adds numbers.
